@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#24374b"><title>Gashapon Monster — Aperçu GBA</title></head>
+<body>
+<main>
+ <header><p class="eyebrow">GASHAPON MONSTER · ATELIER GRAPHIQUE</p><h1>Le village prend des couleurs.</h1><p>Un aperçu séparé du prototype, avec tes trois nouvelles planches PNG.</p></header>
+ <div class="screen-frame"><div id="preview-game" role="img" aria-label="Aperçu du héros, du PNJ et du village avec les graphismes importés"></div></div>
+ <p id="state" role="status" aria-live="polite">Chargement des ressources…</p>
+ <nav aria-label="Orientation des deux personnages"><button data-direction="down" aria-pressed="true">Face</button><button data-direction="left" aria-pressed="false">Gauche</button><button data-direction="right" aria-pressed="false">Droite</button><button data-direction="up" aria-pressed="false">Dos</button></nav>
+ <button id="animate" type="button" disabled aria-pressed="true">Animation de marche : active</button>
+ <p class="hint">Les boutons changent uniquement la pose. Le jeu actuel, ses dialogues et ses collisions restent intacts.</p>
+ <details><summary>Ressources réellement utilisées</summary><ul><li>Héros : hero-gba.png → 12 poses extraites</li><li>PNJ : npc-gba.png → 12 poses extraites</li><li>Village : village-gba.png → atlas de tuiles 16 × 16</li></ul><p>Réduction uniforme sans étirement, transparence nettoyée et pieds alignés. La façade à fenêtre est un bâtiment d’essai. Les raccords de chemins générés nécessitent une reprise avant une intégration complète.</p><p><a href="%BASE_URL%assets/gba-prepared/manifest.json">Voir les découpes et les limites</a></p></details>
+ <footer><a href="/">← Retour au prototype actuel</a><span>240 × 160 · PIXELS NETS</span></footer>
+</main>
+<script type="module" src="./src/preview/main.js"></script>
+</body></html>

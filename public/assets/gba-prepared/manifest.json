@@ -1,0 +1,1113 @@
+{
+  "version": 1,
+  "viewport": {
+    "width": 240,
+    "height": 160
+  },
+  "tileSize": 16,
+  "alphaThreshold": 127,
+  "sources": {
+    "hero-gba.png": {
+      "sha256": "3f9715eb31a102c04d078d1b352f595cb23d23de7f50c6c4991aac3424c851cb",
+      "width": 1448,
+      "height": 1086,
+      "alpha": {
+        "transparent": 1151634,
+        "partial": 420505,
+        "opaque": 389
+      }
+    },
+    "npc-gba.png": {
+      "sha256": "6ec61beb883449fb5cbb983296a8c194774eb54be4bc187832a834c5273ef1f7",
+      "width": 1448,
+      "height": 1086,
+      "alpha": {
+        "transparent": 1079678,
+        "partial": 492317,
+        "opaque": 533
+      }
+    },
+    "village-gba.png": {
+      "sha256": "eac998ab82fdbee647bfc4f8cab71c3d03af34ecf6d100b9dc99c7ca71d429c5",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "transparent": 414799,
+        "partial": 1155705,
+        "opaque": 2012
+      }
+    }
+  },
+  "characters": {
+    "hero": {
+      "file": "hero.png",
+      "frameWidth": 32,
+      "frameHeight": 32,
+      "columns": 3,
+      "rows": 4,
+      "origin": {
+        "x": 0.5,
+        "y": 0.96875
+      },
+      "uniformScale": 0.12195121951219512,
+      "idleColumn": 1,
+      "walkSequence": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 399,
+            "y": 20,
+            "width": 184,
+            "height": 243,
+            "area": 28254
+          },
+          "content": {
+            "x": 5,
+            "y": 1,
+            "width": 22,
+            "height": 30
+          }
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 634,
+            "y": 20,
+            "width": 183,
+            "height": 236,
+            "area": 28116
+          },
+          "content": {
+            "x": 5,
+            "y": 2,
+            "width": 22,
+            "height": 29
+          }
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 863,
+            "y": 20,
+            "width": 183,
+            "height": 243,
+            "area": 27692
+          },
+          "content": {
+            "x": 5,
+            "y": 1,
+            "width": 22,
+            "height": 30
+          }
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 395,
+            "y": 283,
+            "width": 176,
+            "height": 238,
+            "area": 26373
+          },
+          "content": {
+            "x": 5,
+            "y": 2,
+            "width": 21,
+            "height": 29
+          }
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 636,
+            "y": 283,
+            "width": 177,
+            "height": 242,
+            "area": 25529
+          },
+          "content": {
+            "x": 5,
+            "y": 1,
+            "width": 22,
+            "height": 30
+          }
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 878,
+            "y": 283,
+            "width": 173,
+            "height": 242,
+            "area": 25914
+          },
+          "content": {
+            "x": 5,
+            "y": 1,
+            "width": 21,
+            "height": 30
+          }
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 395,
+            "y": 550,
+            "width": 178,
+            "height": 237,
+            "area": 26852
+          },
+          "content": {
+            "x": 5,
+            "y": 2,
+            "width": 22,
+            "height": 29
+          }
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 635,
+            "y": 550,
+            "width": 179,
+            "height": 244,
+            "area": 25760
+          },
+          "content": {
+            "x": 5,
+            "y": 1,
+            "width": 22,
+            "height": 30
+          }
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 876,
+            "y": 550,
+            "width": 177,
+            "height": 240,
+            "area": 26425
+          },
+          "content": {
+            "x": 5,
+            "y": 2,
+            "width": 22,
+            "height": 29
+          }
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 406,
+            "y": 804,
+            "width": 168,
+            "height": 239,
+            "area": 26675
+          },
+          "content": {
+            "x": 6,
+            "y": 2,
+            "width": 20,
+            "height": 29
+          }
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 635,
+            "y": 809,
+            "width": 175,
+            "height": 235,
+            "area": 27257
+          },
+          "content": {
+            "x": 5,
+            "y": 2,
+            "width": 21,
+            "height": 29
+          }
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 875,
+            "y": 805,
+            "width": 171,
+            "height": 246,
+            "area": 27071
+          },
+          "content": {
+            "x": 5,
+            "y": 1,
+            "width": 21,
+            "height": 30
+          }
+        }
+      ]
+    },
+    "npc": {
+      "file": "npc.png",
+      "frameWidth": 32,
+      "frameHeight": 32,
+      "columns": 3,
+      "rows": 4,
+      "origin": {
+        "x": 0.5,
+        "y": 0.96875
+      },
+      "uniformScale": 0.11194029850746269,
+      "idleColumn": 1,
+      "walkSequence": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 361,
+            "y": 23,
+            "width": 228,
+            "height": 253,
+            "area": 35085
+          },
+          "content": {
+            "x": 3,
+            "y": 3,
+            "width": 26,
+            "height": 28
+          }
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 610,
+            "y": 22,
+            "width": 228,
+            "height": 242,
+            "area": 35134
+          },
+          "content": {
+            "x": 3,
+            "y": 4,
+            "width": 26,
+            "height": 27
+          }
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 857,
+            "y": 22,
+            "width": 231,
+            "height": 250,
+            "area": 35176
+          },
+          "content": {
+            "x": 3,
+            "y": 3,
+            "width": 26,
+            "height": 28
+          }
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 365,
+            "y": 280,
+            "width": 226,
+            "height": 244,
+            "area": 33176
+          },
+          "content": {
+            "x": 3,
+            "y": 4,
+            "width": 25,
+            "height": 27
+          }
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 610,
+            "y": 280,
+            "width": 224,
+            "height": 246,
+            "area": 31480
+          },
+          "content": {
+            "x": 3,
+            "y": 3,
+            "width": 25,
+            "height": 28
+          }
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 862,
+            "y": 280,
+            "width": 223,
+            "height": 244,
+            "area": 32682
+          },
+          "content": {
+            "x": 3,
+            "y": 4,
+            "width": 25,
+            "height": 27
+          }
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 365,
+            "y": 538,
+            "width": 222,
+            "height": 245,
+            "area": 32588
+          },
+          "content": {
+            "x": 3,
+            "y": 4,
+            "width": 25,
+            "height": 27
+          }
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 609,
+            "y": 541,
+            "width": 222,
+            "height": 242,
+            "area": 31562
+          },
+          "content": {
+            "x": 3,
+            "y": 4,
+            "width": 25,
+            "height": 27
+          }
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 860,
+            "y": 539,
+            "width": 225,
+            "height": 244,
+            "area": 33254
+          },
+          "content": {
+            "x": 3,
+            "y": 4,
+            "width": 25,
+            "height": 27
+          }
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "step-left",
+          "sourceBounds": {
+            "x": 365,
+            "y": 790,
+            "width": 225,
+            "height": 261,
+            "area": 36965
+          },
+          "content": {
+            "x": 3,
+            "y": 2,
+            "width": 25,
+            "height": 29
+          }
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "idle",
+          "sourceBounds": {
+            "x": 616,
+            "y": 790,
+            "width": 222,
+            "height": 261,
+            "area": 36758
+          },
+          "content": {
+            "x": 3,
+            "y": 2,
+            "width": 25,
+            "height": 29
+          }
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "step-right",
+          "sourceBounds": {
+            "x": 856,
+            "y": 788,
+            "width": 229,
+            "height": 268,
+            "area": 37850
+          },
+          "content": {
+            "x": 3,
+            "y": 1,
+            "width": 26,
+            "height": 30
+          }
+        }
+      ]
+    }
+  },
+  "decor": {
+    "grass": {
+      "file": "grass.png",
+      "sourceBounds": {
+        "x": 58,
+        "y": 79,
+        "width": 64,
+        "height": 64
+      },
+      "uniformScale": 0.25,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "maskPolygon": null,
+      "tiles": [
+        {
+          "index": 0,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "flowers": {
+      "file": "flowers.png",
+      "sourceBounds": {
+        "x": 272,
+        "y": 75,
+        "width": 64,
+        "height": 64
+      },
+      "uniformScale": 0.25,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "maskPolygon": null,
+      "tiles": [
+        {
+          "index": 1,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path": {
+      "file": "path.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "maskPolygon": null,
+      "tiles": [
+        {
+          "index": 2,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "tree": {
+      "file": "tree.png",
+      "sourceBounds": {
+        "x": 31,
+        "y": 467,
+        "width": 165,
+        "height": 208
+      },
+      "uniformScale": 0.19230769230769232,
+      "width": 32,
+      "height": 48,
+      "role": "object",
+      "maskPolygon": null,
+      "tiles": [
+        {
+          "index": 3,
+          "column": 0,
+          "row": 0
+        },
+        {
+          "index": 4,
+          "column": 1,
+          "row": 0
+        },
+        {
+          "index": 5,
+          "column": 0,
+          "row": 1
+        },
+        {
+          "index": 6,
+          "column": 1,
+          "row": 1
+        },
+        {
+          "index": 7,
+          "column": 0,
+          "row": 2
+        },
+        {
+          "index": 8,
+          "column": 1,
+          "row": 2
+        }
+      ]
+    },
+    "bush": {
+      "file": "bush.png",
+      "sourceBounds": {
+        "x": 568,
+        "y": 292,
+        "width": 94,
+        "height": 88
+      },
+      "uniformScale": 0.1702127659574468,
+      "width": 16,
+      "height": 16,
+      "role": "object",
+      "maskPolygon": null,
+      "tiles": [
+        {
+          "index": 9,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "fence": {
+      "file": "fence.png",
+      "sourceBounds": {
+        "x": 563,
+        "y": 386,
+        "width": 114,
+        "height": 74
+      },
+      "uniformScale": 0.14035087719298245,
+      "width": 16,
+      "height": 16,
+      "role": "object",
+      "maskPolygon": null,
+      "tiles": [
+        {
+          "index": 10,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "house": {
+      "file": "house.png",
+      "sourceBounds": {
+        "x": 94,
+        "y": 795,
+        "width": 254,
+        "height": 325
+      },
+      "uniformScale": 0.1889763779527559,
+      "width": 48,
+      "height": 64,
+      "role": "object",
+      "maskPolygon": [
+        [
+          121,
+          0
+        ],
+        [
+          254,
+          149
+        ],
+        [
+          254,
+          174
+        ],
+        [
+          243,
+          163
+        ],
+        [
+          243,
+          325
+        ],
+        [
+          14,
+          325
+        ],
+        [
+          14,
+          163
+        ],
+        [
+          0,
+          176
+        ],
+        [
+          0,
+          149
+        ]
+      ],
+      "tiles": [
+        {
+          "index": 11,
+          "column": 0,
+          "row": 0
+        },
+        {
+          "index": 12,
+          "column": 1,
+          "row": 0
+        },
+        {
+          "index": 13,
+          "column": 2,
+          "row": 0
+        },
+        {
+          "index": 14,
+          "column": 0,
+          "row": 1
+        },
+        {
+          "index": 15,
+          "column": 1,
+          "row": 1
+        },
+        {
+          "index": 16,
+          "column": 2,
+          "row": 1
+        },
+        {
+          "index": 17,
+          "column": 0,
+          "row": 2
+        },
+        {
+          "index": 18,
+          "column": 1,
+          "row": 2
+        },
+        {
+          "index": 19,
+          "column": 2,
+          "row": 2
+        },
+        {
+          "index": 20,
+          "column": 0,
+          "row": 3
+        },
+        {
+          "index": 21,
+          "column": 1,
+          "row": 3
+        },
+        {
+          "index": 22,
+          "column": 2,
+          "row": 3
+        }
+      ]
+    },
+    "path-0": {
+      "file": "path-0.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 0,
+      "tiles": [
+        {
+          "index": 23,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-1": {
+      "file": "path-1.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 1,
+      "tiles": [
+        {
+          "index": 24,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-2": {
+      "file": "path-2.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 2,
+      "tiles": [
+        {
+          "index": 25,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-3": {
+      "file": "path-3.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 3,
+      "tiles": [
+        {
+          "index": 26,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-4": {
+      "file": "path-4.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 4,
+      "tiles": [
+        {
+          "index": 27,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-5": {
+      "file": "path-5.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 5,
+      "tiles": [
+        {
+          "index": 28,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-6": {
+      "file": "path-6.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 6,
+      "tiles": [
+        {
+          "index": 29,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-7": {
+      "file": "path-7.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 7,
+      "tiles": [
+        {
+          "index": 30,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-8": {
+      "file": "path-8.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 8,
+      "tiles": [
+        {
+          "index": 31,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-9": {
+      "file": "path-9.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 9,
+      "tiles": [
+        {
+          "index": 32,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-10": {
+      "file": "path-10.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 10,
+      "tiles": [
+        {
+          "index": 33,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-11": {
+      "file": "path-11.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 11,
+      "tiles": [
+        {
+          "index": 34,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-12": {
+      "file": "path-12.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 12,
+      "tiles": [
+        {
+          "index": 35,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-13": {
+      "file": "path-13.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 13,
+      "tiles": [
+        {
+          "index": 36,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    },
+    "path-14": {
+      "file": "path-14.png",
+      "sourceBounds": {
+        "x": 738,
+        "y": 88,
+        "width": 32,
+        "height": 32
+      },
+      "uniformScale": 0.5,
+      "width": 16,
+      "height": 16,
+      "role": "ground",
+      "pathMask": 14,
+      "tiles": [
+        {
+          "index": 37,
+          "column": 0,
+          "row": 0
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Generated sheets are not native pixel grids: nearest-neighbour reduction can lose small details. Source images remain untouched.",
+    "Partial alpha is hardened at 127 to remove faint background noise; this is an explicit cleanup, not original transparency.",
+    "The house source overlaps adjacent roof pieces. A documented polygon extracts its central gable. This is a window-front test building, not an enterable house.",
+    "Ground patches are manually selected interiors; opposite outer edge pixels are copied to make them repeatable. New path-edge masks combine these grass/dirt samples. The generated path autotile set is NOT used: it has uneven dimensions and no proven matching edges.",
+    "Decor elements have no reliable common original scale. Each isolated element is uniformly resized, without aspect-ratio distortion. This staging tileset does not redefine gameplay collisions.",
+    "NPC and hero front/back/left/right poses are present, but source-generated walking shapes differ; the test scene is intended for visual review before gameplay integration."
+  ],
+  "tileset": {
+    "file": "village-tiles.png",
+    "tileWidth": 16,
+    "tileHeight": 16,
+    "columns": 8,
+    "count": 38
+  }
+}

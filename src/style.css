@@ -1,0 +1,51 @@
+:root{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:#334861;background:#e4eaf0;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-width:240px;min-height:100dvh;background:radial-gradient(ellipse at top,#fff4db,#d9e5ee);overflow-x:hidden;overscroll-behavior-y:contain}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+button:focus-visible{outline:3px solid #d99752;outline-offset:2px}
+.console{--app-height:100dvh;--app-width:100%;--screen-width:100%;width:var(--app-width);min-height:var(--app-height);margin:0 auto;position:relative;padding:calc(4px + env(safe-area-inset-top,0px)) calc(4px + env(safe-area-inset-right,0px)) calc(4px + env(safe-area-inset-bottom,0px)) calc(4px + env(safe-area-inset-left,0px))}
+header{height:36px;display:flex;align-items:center;justify-content:space-between;gap:6px;margin:0 2px 3px}
+.brand{font-size:10px;font-weight:900;letter-spacing:1px;white-space:nowrap;color:#294c79}
+.brand>span:last-child{margin-left:4px;font-size:9px;letter-spacing:1px}
+.capsule{font-size:19px;color:#dbad50;vertical-align:middle;margin-right:3px}
+.header-actions{display:flex;align-items:center;gap:5px}
+.version{font-size:9px;background:#344f76;color:#fff1cc;border:1px solid #758eaf;border-radius:4px;padding:4px}
+#fullscreen{min-height:36px;padding:5px 8px;font-size:10px;border:1px solid #8ea6bb;border-radius:5px;color:#304f72;background:#edf2ee}
+#fullscreen:disabled{opacity:.6}
+.location{height:17px;display:flex;align-items:center;gap:6px;margin:0 3px 3px;color:#405e7b;font-size:9px;letter-spacing:1px}
+.light{width:6px;height:6px;border-radius:50%;background:#59936f}.region{margin-left:auto;color:#6d8196;font-size:8px}
+#screen{position:relative;margin:0 auto;background:#a9c878;overflow:hidden;outline:2px solid #708ba2;box-shadow:0 2px #a2b2bf;aspect-ratio:3/2;max-width:100%;touch-action:none}
+#game{width:100%;height:100%;overflow:hidden}
+#game canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges;touch-action:none}
+#dialogue{position:absolute;bottom:4%;left:4%;width:92%;padding:9px;color:#304761;background:#fff6dc;border:3px double #486888;box-shadow:2px 3px #273e6066,inset 0 0 0 2px #ebd296;border-radius:4px;font-size:clamp(12px,3vw,16px);line-height:1.4}
+#dialogue[hidden],#display-status[hidden]{display:none}
+#dialogue strong{color:#4268a0}#dialogue p{margin:4px 0 8px}#dialogue small{display:block;text-align:right;font-size:10px;color:#7f6d50}
+.screen-caption{display:none}
+.controls{display:flex;align-items:center;justify-content:space-between;max-width:520px;margin:8px auto 0;padding:0 10px;touch-action:none}
+.dpad{--key:52px;display:grid;grid-template-columns:repeat(3,var(--key));grid-template-rows:repeat(3,var(--key));filter:drop-shadow(0 3px #263b56);touch-action:none;user-select:none}
+.dpad button,.pivot{border:0;background:#3f5878;color:#e1eaf2;display:grid;place-items:center;font-size:19px;touch-action:none}
+.dpad [data-control=up]{grid-column:2;border-radius:8px 8px 0 0}.dpad [data-control=left]{grid-row:2;border-radius:8px 0 0 8px}.pivot{grid-row:2;grid-column:2;color:#2c415e}.dpad [data-control=right]{grid-row:2;grid-column:3;border-radius:0 8px 8px 0}.dpad [data-control=down]{grid-row:3;grid-column:2;border-radius:0 0 8px 8px}
+.action-buttons{display:flex;gap:14px;transform:rotate(-12deg);touch-action:none}
+.action-buttons>div{display:flex;flex-direction:column;align-items:center;gap:8px}.action-buttons button{width:64px;height:64px;border-radius:50%;border:3px solid #ad8745;background:#d9af5d;color:#fff8e1;box-shadow:0 4px #82683b,inset 0 2px #f3d28c;font-size:22px;font-weight:bold;touch-action:none}
+.action-buttons small{font-size:9px;letter-spacing:1px;color:#657a90}.pressed{filter:brightness(.8);transform:translateY(2px)}
+footer{display:flex;align-items:center;justify-content:space-between;max-width:500px;margin:8px auto 0;padding:0 8px;gap:8px;min-height:32px}
+#debug{min-height:32px;font-size:9px;letter-spacing:1px;background:transparent;border:1px solid #8ea6bb;border-radius:12px;padding:6px 12px;color:#486888}#debug[aria-pressed=true]{background:#486888;color:#fff3da}#coordinates{font-size:10px;color:#647d94}
+.help{text-align:center;font-size:10px;line-height:1.6;color:#657a90;margin:5px 4px 0}
+#display-status{font-size:11px;line-height:1.4;color:#7c4c39;margin:3px 6px}
+/* The same DOM controls move into side rails; nothing covers the map. */
+.console[data-layout=landscape]{height:var(--app-height);min-height:0;display:grid;grid-template-columns:var(--rail-width) minmax(0,1fr) var(--rail-width);grid-template-rows:40px minmax(0,1fr);gap:4px;overflow:hidden}
+.console[data-layout=landscape] header{grid-column:1 / 4;grid-row:1;margin:0 2px;height:36px}
+.console[data-layout=landscape] #screen{grid-column:2;grid-row:2;align-self:center;justify-self:center}
+.console[data-layout=landscape] .location,.console[data-layout=landscape] .help,.console[data-layout=landscape] .screen-caption{display:none}
+.console[data-layout=landscape] .controls{display:contents}
+.console[data-layout=landscape] .dpad{--key:calc(var(--rail-width) / 3);grid-column:1;grid-row:2;justify-self:center;align-self:center}
+.console[data-layout=landscape] .action-buttons{grid-column:3;grid-row:2;justify-self:center;align-self:center;flex-direction:column-reverse;gap:16px;transform:none}
+.console[data-layout=landscape] .action-buttons button{width:64px;height:64px}
+.console[data-layout=landscape] footer{position:absolute;top:calc(4px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);margin:0;padding:0;min-height:32px;gap:12px}
+.console[data-layout=landscape] #display-status{position:absolute;top:40px;left:20%;right:20%;z-index:20;padding:6px;background:#fff6dc;border:1px solid #9a805c;border-radius:4px}
+.console:fullscreen{background:radial-gradient(ellipse at top,#fff4db,#d9e5ee);margin:0;overflow:auto}
+.console:fullscreen[data-layout=landscape]{overflow:hidden}
+.console:fullscreen .help{display:none}
+@media(max-width:340px) and (orientation:portrait){.controls{padding:0 2px}.dpad{--key:48px}.action-buttons{gap:9px}.action-buttons button{width:56px;height:56px}.brand{letter-spacing:0}.brand>span:last-child{letter-spacing:0}.version{display:none}}
+@media(max-height:270px) and (orientation:landscape){.console[data-layout=landscape] .action-buttons{gap:5px}.console[data-layout=landscape] .action-buttons small{display:none}.console[data-layout=landscape] .action-buttons button{width:56px;height:56px}}
+@media(max-width:300px) and (orientation:portrait){.action-buttons{flex-direction:column-reverse;gap:8px;transform:none}}
